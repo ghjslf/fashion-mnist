@@ -27,7 +27,7 @@ model.add(Dense(10, activation='softmax'))
 # Компилируем модель 
 model.compile(loss='categorical_crossentropy', # Указываем фунукцию ошибки (здесь это не среднеквадратичная)
               optimizer='SGD', # Указываем метод оптимизации (гардиентный спуск)
-              metrics=['accuracy']) # Указываем метрику качества ???
+              metrics=['accuracy']) # Указываем метрику качества (доля правильных ответов)
 
 # Печатаем параметры модели
 print(model.summary())
@@ -48,7 +48,6 @@ print(np.argmax(predictions[0]))
 print(np.argmax(y_train[0]))
 
 classes = ['футболка', 'брюки', 'свитер', 'платье', 'пальто', 'туфли', 'рубашка', 'кроссовки', 'сумка', 'ботинки']
-
 
 n = 0
 plt.imshow(x_train[n].reshape(28, 28), cmap=plt.cm.binary)
