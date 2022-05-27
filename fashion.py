@@ -25,7 +25,7 @@ model.add(Dense(1000, input_dim=784, activation='relu'))
 model.add(Dense(10, activation='softmax'))
 
 # Компилируем модель 
-model.compile(loss='categorical_crossentropy', # Указываем фунукцию ошибки (здесь это не среднеквадратичная)
+model.compile(loss='categorical_crossentropy', # Указываем фунукцию ошибки
               optimizer='SGD', # Указываем метод оптимизации (гардиентный спуск)
               metrics=['accuracy']) # Указываем метрику качества (доля правильных ответов)
 
